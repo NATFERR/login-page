@@ -1,0 +1,135 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;1,700&display=swap");
+/**/
+
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background: #dce6f5;
+  color: #455a64;
+  font-weight: 500;
+  display: flex;
+  min-height: 100vh;
+}
+
+main {
+  width: 50vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+main h1 {
+  color: #203e80;
+  font-size: 3rem;
+  margin-bottom: 3rem;
+}
+
+main .social-media {
+  display: flex;
+  align-content: center;
+}
+main .social-media a {
+  text-decoration: none;
+}
+
+main .social-media img {
+  width: 36px;
+  margin-left: 3rem;
+}
+
+main .social-media a:first-child img {
+  margin-left: 0;
+}
+
+main .alternative {
+  margin-top: 1rem;
+}
+main .alternative span {
+  font-size: 1.1rem;
+  font-weight: 400;
+  color: rgba(72, 71, 71, 0.3);
+  position: relative;
+}
+main .alternative span::before,
+main .alternative span::after {
+  position: absolute;
+  content: ''; /*ao usar a função before/after, o elemento 'content' é obrigatório, mesmo que esteja vazio. */
+  height: 1px;
+  width: 100px;
+  bottom: 50%;
+  right: 50px;
+  color: rgb(72, 71, 71);
+}
+
+main .alternative span::after {
+    left: 50px;
+}
+
+section.images img {
+  width: 100%;
+}
+main form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+main form label {
+  display: flex;
+  flex-direction: column;
+}
+main form label span {
+  font-size: 1.1rem;
+  margin-top: 2rem;
+}
+main form input {
+  background: #f5f5f5;
+  width: 300px;
+  height: 50px;
+  padding: 0 0.5rem;
+  margin-top: 1rem;
+  outline: none;
+  color: #455a64;
+  font-size: 1rem;
+  border: none;
+  border-radius: 8px;
+}
+
+main form input[type="submit"] {
+  cursor: pointer;
+  width: 50%;
+  margin-top: 4rem;
+  border: none;
+  border-radius: 32px;
+  background: #203e80;
+  color: #ebebeb;
+  font-size: 1.1rem;
+  transition: all 0.3s ease-in-out;
+}
+
+main form input[type="submit"]:hover {
+  background: #407bff;
+}
+section.images {
+  display: flex;
+  align-items: flex-end;
+  padding-left: 20rem;
+  padding-bottom: 8rem;
+}
+
+section.images .circle {
+  position: absolute; /*se nao tem pai relativo, vai ser absoluto em relação ao body*/
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  background: linear-gradient(45deg, #c0dae8, #636fa4);
+  clip-path: circle(50% at right 100%);
+  z-index: -1; /*essa funcionalidade so vai com elementos que posssuam propriedade 'position' */
+}
